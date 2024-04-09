@@ -12,11 +12,12 @@ class FileStorage:
         newDict = {}
         if cls:
             class_name = cls().__class__.__name__
-            cl = FileStorage.__objects
-            for key, value in cl.items():
-                if key[:5] == class_name:
+            listType = list(
+                filter(lambda x: x[0] in class_name, FileStorage.__objects))
+            for key, value in FileStorage.__objects.items():
+                if key in listType:
                     newDict[key] = value
-                FileStorage.__objects = newDict
+            return newDict
         return FileStorage.__objects
 
     def new(self, obj):
