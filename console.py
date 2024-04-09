@@ -126,7 +126,8 @@ class HBNBCommand(cmd.Cmd):
         storage.save()
         for parameters in arguments[1:]:
             valueAttr = parameters.split("=")
-            setattr(new_instance, valueAttr[0], eval(valueAttr[1]))
+            setattr(new_instance, valueAttr[0], eval(
+                valueAttr[1].replace("_", " ")))
         print(new_instance.id)
         storage.save()
 

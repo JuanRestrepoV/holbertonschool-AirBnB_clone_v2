@@ -20,5 +20,109 @@
         "updated_at": "2024-04-09T12:26:11.233447",
         "city_id": "0001",
         "__class__": "Place"
+    },
+    "City.d0a4a39f-7e22-451f-b2e4-4b2f5d3af267": {
+        "id": "d0a4a39f-7e22-451f-b2e4-4b2f5d3af267",
+        "created_at": "2024-04-09T12:32:23.048493",
+        "updated_at": "2024-04-09T12:32:23.048501",
+        "state_id": "7523232",
+        "name": "Brayan",
+        "__class__": "City"
+    },
+    "State.060a4555-4dd6-444a-9616-ab632e696a9d": {
+        "id": "060a4555-4dd6-444a-9616-ab632e696a9d",
+        "created_at": "2024-04-09T12:33:05.008304",
+        "updated_at": "2024-04-09T12:33:05.008309",
+        "name": "California",
+        "__class__": "State"
+    },
+    "State.9957266f-e58f-4088-8502-e3455d874008": {
+        "id": "9957266f-e58f-4088-8502-e3455d874008",
+        "created_at": "2024-04-09T12:36:26.530598",
+        "updated_at": "2024-04-09T12:36:26.530605",
+        "__class__": "State"
+    },
+    "Place.9da848d8-7762-43cd-89a0-6cdf32d8665b": {
+        "id": "9da848d8-7762-43cd-89a0-6cdf32d8665b",
+        "created_at": "2024-04-09T12:39:04.410544",
+        "updated_at": "2024-04-09T12:39:04.410577",
+        "city_id": "sa",
+        "__class__": "Place"
+    },
+    "Place.ad4e9620-6258-4883-a98d-061b509ed8fc": {
+        "id": "ad4e9620-6258-4883-a98d-061b509ed8fc",
+        "created_at": "2024-04-09T12:39:20.876244",
+        "updated_at": "2024-04-09T12:39:20.876249",
+        "__class__": "Place"
+    },
+    "Place.17f5ba73-a19a-474b-aa77-1d501673f088": {
+        "id": "17f5ba73-a19a-474b-aa77-1d501673f088",
+        "created_at": "2024-04-09T12:39:48.564443",
+        "updated_at": "2024-04-09T12:39:48.564455",
+        "__class__": "Place"
+    },
+    "Place.906c3462-a653-4b5a-a716-abad2cfeea08": {
+        "id": "906c3462-a653-4b5a-a716-abad2cfeea08",
+        "created_at": "2024-04-09T12:42:33.087017",
+        "updated_at": "2024-04-09T12:42:33.087028",
+        "__class__": "Place"
+    },
+    "Place.be507207-3c8e-48c9-ab63-6a198ce43542": {
+        "id": "be507207-3c8e-48c9-ab63-6a198ce43542",
+        "created_at": "2024-04-09T12:43:51.842944",
+        "updated_at": "2024-04-09T12:43:51.842952",
+        "__class__": "Place"
+    },
+    "Place.3cb03a30-db25-4e79-9e15-6d03638213b7": {
+        "id": "3cb03a30-db25-4e79-9e15-6d03638213b7",
+        "created_at": "2024-04-09T12:44:22.903004",
+        "updated_at": "2024-04-09T12:44:22.903015",
+        "__class__": "Place"
+    },
+    "Place.235e2884-f5ca-40c6-a48e-59c824548271": {
+        "id": "235e2884-f5ca-40c6-a48e-59c824548271",
+        "created_at": "2024-04-09T12:45:06.557747",
+        "updated_at": "2024-04-09T12:45:06.557753",
+        "__class__": "Place"
+    },
+    "Place.f4089790-3d7b-4c7a-b562-cbdc318094b6": {
+        "id": "f4089790-3d7b-4c7a-b562-cbdc318094b6",
+        "created_at": "2024-04-09T12:46:51.195084",
+        "updated_at": "2024-04-09T12:46:51.195090",
+        "name": "Brayan",
+        "__class__": "Place"
+    },
+    "Place.7149fce0-c611-48d0-b18b-99651f9d2cf4": {
+        "id": "7149fce0-c611-48d0-b18b-99651f9d2cf4",
+        "created_at": "2024-04-09T12:46:58.109048",
+        "updated_at": "2024-04-09T12:46:58.109054",
+        "__class__": "Place"
+    },
+    "Place.45abae84-01f3-446f-a717-db67eb136e75": {
+        "id": "45abae84-01f3-446f-a717-db67eb136e75",
+        "created_at": "2024-04-09T12:47:37.256205",
+        "updated_at": "2024-04-09T12:47:37.256214",
+        "name": "Brayan",
+        "__class__": "Place"
+    },
+    "Place.d1704bae-f705-4706-b57c-f0e07608d543": {
+        "id": "d1704bae-f705-4706-b57c-f0e07608d543",
+        "created_at": "2024-04-09T12:47:42.150299",
+        "updated_at": "2024-04-09T12:47:42.150306",
+        "__class__": "Place"
+    },
+    "Place.e4b09e73-84e8-4560-9cc2-1b21db0c73b4": {
+        "id": "e4b09e73-84e8-4560-9cc2-1b21db0c73b4",
+        "created_at": "2024-04-09T12:49:45.527603",
+        "updated_at": "2024-04-09T12:49:45.527616",
+        "name": "Brayan Salazar",
+        "__class__": "Place"
+    },
+    "Place.fbce2121-c10b-4052-b3e4-b12ff49f6501": {
+        "id": "fbce2121-c10b-4052-b3e4-b12ff49f6501",
+        "created_at": "2024-04-09T12:50:19.682230",
+        "updated_at": "2024-04-09T12:50:19.682238",
+        "name": "Brayan Salazar",
+        "__class__": "Place"
     }
 }
