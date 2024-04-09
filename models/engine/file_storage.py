@@ -11,13 +11,12 @@ class FileStorage:
     def all(self, cls=None):
         newDict = {}
         if cls:
-            if FileStorage.__objects == None:
-                class_name = cls().__class__.__name__
-                cl = FileStorage.__objects
-                for key, value in cl.items():
-                    if key[:5] == class_name:
-                        newDict[key] = value
-                return newDict
+            class_name = cls().__class__.__name__
+            cl = FileStorage.__objects
+            for key, value in cl.items():
+                if key[:5] == class_name:
+                    newDict[key] = value
+                FileStorage.__objects = newDict
         return FileStorage.__objects
 
     def new(self, obj):
