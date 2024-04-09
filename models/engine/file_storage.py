@@ -17,8 +17,7 @@ class FileStorage:
             for key, value in FileStorage.__objects.items():
                 if key in listType:
                     newDict[key] = value
-                newDict = FileStorage.__objects
-            return newDict
+            FileStorage.__objects = newDict
         return FileStorage.__objects
 
     def new(self, obj):
