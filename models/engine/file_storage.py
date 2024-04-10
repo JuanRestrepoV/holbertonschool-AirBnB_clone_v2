@@ -11,14 +11,20 @@ class FileStorage:
     def all(self, cls=None):
         newDict = {}
         if cls:
-            class_name = cls().__class__.__name__
-            listType = list(
-                filter(lambda x: x[0] in class_name, FileStorage.__objects))
+            print(FileStorage.__objects.items())
             for key, value in FileStorage.__objects.items():
-                if key in listType:
+                if value.__class__ == cls:
                     newDict[key] = value
-            FileStorage.__objects = newDict
+            return newDict
         return FileStorage.__objects
+        # newDict = {}
+        # if cls:
+        #     class_name = cls().__class__.__name__
+        #     for key, value in FileStorage.__objects.items():
+        #         if key[:5] == class_name:
+        #             newDict[key] = value
+        #     return newDict
+        # return FileStorage.__objects
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
