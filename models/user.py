@@ -19,4 +19,7 @@ class User(BaseModel):
     last_name = Column(String(128), Nullable=False)
     places = Relationship('Place', backref="user", cascade="delete")
     reviews = Relationship('Review', backref="user", cascade="delete")
+<<<<<<< HEAD
+>>>>>>> b47846d (updating task 8 and 9)
+=======
 >>>>>>> b47846d (updating task 8 and 9)
