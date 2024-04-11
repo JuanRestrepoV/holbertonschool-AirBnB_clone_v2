@@ -14,7 +14,11 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
-clases = [User, State, City, Amenity, Place, Review]
+classes = {
+    'User': User, 'Place': Place,
+    'State': State, 'City': City, 'Amenity': Amenity,
+    'Review': Review
+}
 
 
 class DBStorage():
@@ -34,14 +38,20 @@ class DBStorage():
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
-        newDict = {}
-        # if cls is None:
-        #     obj = self.__session.query(cls).all()
-        #     for objs in obj:
-        #         key = f"{obj.__class.__name}.{obj.id}"
-        #         newDict[key] = objs
-        #     print(newDict)
-        return {}
+        new_dict = {}
+        lista = []
+        if cls is None:
+            lista += self.__session.query(State).all()
+        for obj in lista:
+            key = obj.__class__.__name + "." + obj.id
+            new_dict[key] = obj
+        # for class_ in classes:
+        #     if cls is None or cls is class_:
+        #         instances = self.__session.query(User).all()
+        #         for obj in instances:
+        #             key = obj.__class__.__name__ + "." + obj.id
+        #             instances[key] = obj
+        return new_dict
 
     def new(self, obj):
         self.__session.add(obj)
@@ -59,3 +69,6 @@ class DBStorage():
             bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(session_factory)
         self.__session = Session()
+        
+    def close(self):
+        self.__session.close()
