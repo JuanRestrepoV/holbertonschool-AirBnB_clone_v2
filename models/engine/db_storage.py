@@ -35,12 +35,12 @@ class DBStorage():
 
     def all(self, cls=None):
         newDict = {}
-        value = 1
-        if cls is None:
-            obj = self.__session.query(cls).all()
-            for objs in obj:
-                key = f"{obj.__class.__name}.{obj.id}"
-                newDict[key] = objs
+        # if cls is None:
+        #     obj = self.__session.query(cls).all()
+        #     for objs in obj:
+        #         key = f"{obj.__class.__name}.{obj.id}"
+        #         newDict[key] = objs
+        #     print(newDict)
         return {}
 
     def new(self, obj):
