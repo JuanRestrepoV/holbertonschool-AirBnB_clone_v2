@@ -40,5 +40,12 @@
         "updated_at": "2024-04-12T12:05:10.604260",
         "name": "Nevada",
         "__class__": "State"
+    },
+    "User.b05ae832-9636-4e5d-96c6-9f7d15ad962e": {
+        "id": "b05ae832-9636-4e5d-96c6-9f7d15ad962e",
+        "created_at": "2024-04-12T14:28:08.030149",
+        "updated_at": "2024-04-12T14:28:08.031253",
+        "name": "Brayan",
+        "__class__": "User"
     }
 }
