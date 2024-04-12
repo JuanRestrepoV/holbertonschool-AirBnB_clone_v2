@@ -12,7 +12,7 @@ class State(BaseModel):
     cities = relationship('City', backref="state", cascade="delete")
 
     @property
-    def get_cities(self):
+    def method_cities(self):
         cities_for_state = []
         for city in self.cities:
             if city.state_id == self.id:
