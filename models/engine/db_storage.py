@@ -39,18 +39,12 @@ class DBStorage():
 
     def all(self, cls=None):
         new_dict = {}
-        lista = []
-        if cls is None:
-            lista += self.__session.query(State).all()
-        for obj in lista:
-            key = obj.__class__.__name + "." + obj.id
-            new_dict[key] = obj
-        # for class_ in classes:
-        #     if cls is None or cls is class_:
-        #         instances = self.__session.query(User).all()
-        #         for obj in instances:
-        #             key = obj.__class__.__name__ + "." + obj.id
-        #             instances[key] = obj
+        for class_ in classes:
+            if cls is None or cls is class_ or cls is classes[class_]:
+                instances = self.__session.query(User).all()
+                for obj in instances:
+                    key = obj.__class__.__name__ + "." + obj.id
+                    instances[key] = obj
         return new_dict
 
     def new(self, obj):
