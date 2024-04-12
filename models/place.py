@@ -2,10 +2,19 @@
 """ Place Module for HBNB project """
 import os
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, Integer, Float
+from sqlalchemy import Column, String, Integer, Float, Table
 from sqlalchemy.orm import relationship
 from sqlalchemy import ForeignKey
 from models.review import Review
+
+
+place_amenity = Table('place_amenity', Base.metadata,
+                      Column('place_id', ForeignKey(
+                          'places.id'), primary_key=True, nullable=False),
+                      Column('amenity_id', ForeignKey(
+                          'amenities.id'), primary_key=True, nullable=False)
+                      )
+
 
 class Place(BaseModel, Base):
     """ A place to stay """
@@ -18,18 +27,27 @@ class Place(BaseModel, Base):
     number_bathrooms = Column(Integer, default=0, nullable=False)
     max_guest = Column(Integer, default=0, nullable=False)
     price_by_night = Column(Integer, default=0, nullable=False)
-    latitude = Column(Float(0), nullable=True)
-    longitude = Column(Float(0), nullable=True)
+    latitude = Column(Float, default=0, nullable=True)
+    longitude = Column(Float, default=0, nullable=True)
     amenity_ids = []
-
     reviews = relationship('Review', backref="place", cascade="delete")
-
+    amenities = relationship('Amenity', secondary='place_amenity', viewonly=False, overlaps='place_amenity')
+    
     if os.getenv("HBNB_TYPE_STORAGE") != "db":
         @property
         def get_reviews(self):
             from models.__init__ import storage
-            reviews_for_places = []
-            for review in storage.all(Review).values():
-                if review.place_id == self.id:
-                    reviews_for_places.append(review)
-            return reviews_for_places
+            return [review for review in storage.all(Review).values() if review.place_id == self.id]
+
+        @property
+        def get_amenities(self):
+            from models.amenity import Amenity
+            from models.__init__ import storage
+            return [amenity for amenity in storage.all(
+                Amenity).values() if amenity.id == self.amenity_ids]
+
+        @get_amenities.setter
+        def get_amenities(self, value):
+            from models.amenity import Amenity
+            if isinstance(value, Amenity):
+                self.amenity_ids.append(value.id)
