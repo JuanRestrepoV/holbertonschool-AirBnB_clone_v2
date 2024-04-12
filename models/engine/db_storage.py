@@ -14,12 +14,7 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
-classes = {
-    'User': User, 'Place': Place,
-    'State': State, 'City': City, 'Amenity': Amenity,
-    'Review': Review
-}
-
+classes = [User, Place, State, City, Amenity, Review]
 
 class DBStorage():
     __engine = None
@@ -39,9 +34,9 @@ class DBStorage():
 
     def all(self, cls=None):
         new_dict = {}
-        for class_ in classes:
-            if cls is None or cls is class_ or cls is classes[class_]:
-                instances = self.__session.query(User).all()
+        if cls is None:
+            for class_ in classes:
+                instances = self.__session.query(class_).all()
                 for obj in instances:
                     key = obj.__class__.__name__ + "." + obj.id
                     instances[key] = obj
@@ -63,6 +58,6 @@ class DBStorage():
             bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(session_factory)
         self.__session = Session()
-        
+
     def close(self):
         self.__session.close()
