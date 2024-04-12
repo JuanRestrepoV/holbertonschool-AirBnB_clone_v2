@@ -16,7 +16,8 @@ from models.review import Review
 
 classes = [User, Place, State, City, Amenity, Review]
 
-class DBStorage():
+
+class DBStorage:
     __engine = None
     __session = None
 
@@ -31,7 +32,8 @@ class DBStorage():
 
         if os.getenv("HBNB_ENV") == "test":
             Base.metadata.drop_all(self.__engine)
-
+            
+         
     def all(self, cls=None):
         new_dict = {}
         if cls is None:
@@ -39,7 +41,7 @@ class DBStorage():
                 instances = self.__session.query(class_).all()
                 for obj in instances:
                     key = obj.__class__.__name__ + "." + obj.id
-                    instances[key] = obj
+                    new_dict[key] = obj
         return new_dict
 
     def new(self, obj):
