@@ -33,20 +33,21 @@ class Place(BaseModel, Base):
     reviews = relationship('Review', backref="place", cascade="delete")
     amenities = relationship('Amenity', secondary='place_amenity', viewonly=False, overlaps="place_amenities")
 
-    @property
-    def get_reviews(self):
-        from models.__init__ import storage
-        return [review for review in storage.all(Review).values() if review.place_id == self.id]
+    if os.getenv("HBNB_TYPE_STORAGE") != "db":
+        @property
+        def get_reviews(self):
+            from models.__init__ import storage
+            return [review for review in storage.all(Review).values() if review.place_id == self.id]
 
-    @property
-    def amenities(self):
-        from models.amenity import Amenity
-        from models.__init__ import storage
-        return [amenity for amenity in storage.all(Amenity).values()
-                if amenity.id in self.amenity_ids]
+        @property
+        def amenities(self):
+            from models.amenity import Amenity
+            from models.__init__ import storage
+            return [amenity for amenity in storage.all(Amenity).values()
+                    if amenity.id in self.amenity_ids]
 
-    @amenities.setter
-    def amenities(self, amenity):
-        from models.amenity import Amenity
-        if isinstance(amenity, Amenity):
-            self.amenity_ids.append(amenity.id)
+        @amenities.setter
+        def amenities(self, amenity):
+            from models.amenity import Amenity
+            if isinstance(amenity, Amenity):
+                self.amenity_ids.append(amenity.id)
