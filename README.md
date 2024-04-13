@@ -151,11 +151,11 @@ Usage: <class_name>.update(<_id>, <dictionary>)
  <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="100">
 </a>
 
+<br>
 <p>Juan Pablo Resptepo</p>
 <a href="http://www.linkedin.com/in/juan-pablo-restrepo-99a07729a">
   <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" width="50">
 </a>
-<br>
 <a href="https://github.com/JuanRestrepoV">
  <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="100">
 </a>
