@@ -28,8 +28,8 @@ class Place(BaseModel, Base):
     number_bathrooms = Column(Integer(), default=0, nullable=False)
     max_guest = Column(Integer(), default=0, nullable=False)
     price_by_night = Column(Integer(), default=0, nullable=False)
-    latitude = Column(Float(0), nullable=True)
-    longitude = Column(Float(0), nullable=True)
+    latitude = Column(Float(), nullable=True)
+    longitude = Column(Float(), nullable=True)
     amenity_ids = []
     reviews = relationship('Review', backref="place", cascade="delete")
     amenities = relationship(
@@ -46,7 +46,7 @@ class Place(BaseModel, Base):
             from models.amenity import Amenity
             from models.__init__ import storage
             return [amenity for amenity in storage.all(Amenity).values()
-                    if amenity.id == self.amenity_ids]
+                    if amenity.id in self.amenity_ids]
 
         @amenities.setter
         def amenities(self, amenity):
