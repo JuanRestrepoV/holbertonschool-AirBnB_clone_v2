@@ -24,10 +24,10 @@ class Place(BaseModel, Base):
     user_id = Column(String(60), ForeignKey('users.id'),  nullable="False")
     name = Column(String(128), nullable=False)
     description = Column(String(1024), nullable=True)
-    number_rooms = Column(Integer, default=0, nullable=False)
-    number_bathrooms = Column(Integer, default=0, nullable=False)
-    max_guest = Column(Integer, default=0, nullable=False)
-    price_by_night = Column(Integer, default=0, nullable=False)
+    number_rooms = Column(Integer(), default=0, nullable=False)
+    number_bathrooms = Column(Integer(), default=0, nullable=False)
+    max_guest = Column(Integer(), default=0, nullable=False)
+    price_by_night = Column(Integer(), default=0, nullable=False)
     latitude = Column(Float(0), nullable=True)
     longitude = Column(Float(0), nullable=True)
     amenity_ids = []
@@ -45,8 +45,13 @@ class Place(BaseModel, Base):
         def amenities(self):
             from models.amenity import Amenity
             from models.__init__ import storage
-            return [amenity for amenity in storage.all(
-                Amenity).values() if amenity.id in self.amenity_ids]
+            # return [amenity for amenity in storage.all(
+            #     Amenity).values() if amenity.id == self.amenity_ids]
+            amenity_instances = []
+            for amenity in storage.all(Amenity).values():
+                if amenity.id == self.amenity_ids:
+                    amenity_instances.append(amenity)
+            return amenity_instances
 
         @amenities.setter
         def amenities(self, amenity):
