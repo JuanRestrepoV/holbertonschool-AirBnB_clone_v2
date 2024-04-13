@@ -1,7 +1,7 @@
 <center> <h1>HBNB - The Console</h1> </center>
 
 <center>
-<img src="https://blog.holbertonschool.com/wp-content/uploads/2020/04/unnamed-2.png">
+<img src="https://blog.holbertonschool.com/wp-content/uploads/2020/04/unnamed-2.png" style="align-items:center">
 </center>
 
 <center><h3>Repository Contents by Project Task</h3> </center>
