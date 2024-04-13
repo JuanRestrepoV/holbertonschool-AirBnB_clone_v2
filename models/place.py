@@ -42,8 +42,9 @@ class Place(BaseModel, Base):
         @property
         def amenities(self):
             from models.amenity import Amenity
+            from models.engine.file_storage import FileStorage
             from models.__init__ import storage
-            return [amenity for amenity in storage.all(Amenity).values()
+            return [amenity for amenity in FileStorage.all(Amenity).values()
                     if amenity.id in self.amenity_ids]
 
         @amenities.setter
