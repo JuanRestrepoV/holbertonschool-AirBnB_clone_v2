@@ -10,13 +10,14 @@ class FileStorage:
 
     def all(self, cls=None):
         newDict = {}
-        print("hi")
         if cls:
+            if type(cls) == str:
+                cls = eval(cls)
             for key, value in self.__objects.items():
                 if value.__class__ == cls:
                     newDict[key] = value
             return newDict
-        return FileStorage.__objects
+        return self.__objects
         # newDict = {}
         # if cls:
         #     class_name = cls().__class__.__name__
