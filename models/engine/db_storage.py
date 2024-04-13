@@ -32,8 +32,7 @@ class DBStorage:
 
         if os.getenv("HBNB_ENV") == "test":
             Base.metadata.drop_all(self.__engine)
-            
-         
+
     def all(self, cls=None):
         new_dict = {}
         if cls is None:
@@ -42,6 +41,10 @@ class DBStorage:
                 for obj in instances:
                     key = obj.__class__.__name__ + "." + obj.id
                     new_dict[key] = obj
+            return new_dict
+        for obj in instances:
+            key = obj.__class__.__name__ + "." + obj.id
+            new_dict[key] = obj
         return new_dict
 
     def new(self, obj):
