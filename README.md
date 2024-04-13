@@ -152,8 +152,8 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 </a>
 
 <p>Juan Pablo Resptepo</p>
-<a href="https://www.linkedin.com/in/brayan-salazar-perdomo-07a4321b1/">
-  <img src="http://www.linkedin.com/in/juan-pablo-restrepo-99a07729a" width="50">
+<a href="http://www.linkedin.com/in/juan-pablo-restrepo-99a07729a">
+  <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="50">
 </a>
 
 <a href="https://github.com/JuanRestrepoV">
