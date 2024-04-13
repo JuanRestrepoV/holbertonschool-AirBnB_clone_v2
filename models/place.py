@@ -52,4 +52,4 @@ class Place(BaseModel, Base):
         def amenities(self, amenity):
             from models.amenity import Amenity
             if type(amenity) == Amenity:
-                self.amenity_ids.append(amenity.id)
+                self.amenity_ids.append(Amenity.id)

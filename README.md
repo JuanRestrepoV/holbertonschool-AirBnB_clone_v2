@@ -140,6 +140,26 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+
+<h1>Authors</h1>
+<p>Brayan Salazar</p>
+<a href="https://www.linkedin.com/in/brayan-salazar-perdomo-07a4321b1/">
+  <img src="https://static-00.iconduck.com/assets.00/linkedin-icon-2048x2048-ya5g47j2.png" width="50">
+</a>
+
+<a href="https://github.com/BrayanSalazar14">
+ <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="100">
+</a>
+
+<p>Juan Pablo Resptepo</p>
+<a href="https://www.linkedin.com/in/brayan-salazar-perdomo-07a4321b1/">
+  <img src="http://www.linkedin.com/in/juan-pablo-restrepo-99a07729a" width="50">
+</a>
+
+<a href="https://github.com/JuanRestrepoV">
+ <img src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png" width="100">
+</a>
+
 <footer>
 <p align="center">
 <img src="https://media0.giphy.com/media/coxQHKASG60HrHtvkt/giphy.gif?cid=6c09b952gjns7odqruiw6isle6jxqntm70ahtbs4gdrw4hbx&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g">
