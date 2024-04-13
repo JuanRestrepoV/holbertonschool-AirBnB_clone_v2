@@ -45,13 +45,8 @@ class Place(BaseModel, Base):
         def amenities(self):
             from models.amenity import Amenity
             from models.__init__ import storage
-            # return [amenity for amenity in storage.all(
-            #     Amenity).values() if amenity.id == self.amenity_ids]
-            amenity_instances = []
-            for amenity in storage.all(Amenity).values():
-                if amenity.id == self.amenity_ids:
-                    amenity_instances.append(amenity)
-            return amenity_instances
+            return [amenity for amenity in storage.all(Amenity)
+                    .values() if amenity.id == self.amenity_ids]
 
         @amenities.setter
         def amenities(self, amenity):
