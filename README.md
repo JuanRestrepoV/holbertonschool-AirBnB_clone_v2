@@ -140,3 +140,8 @@ Usage: <class_name>.update(<_id>, <dictionary>)
 (hbnb) ["[User] (98bea5de-9cb0-4d78-8a9d-c4de03521c30) {'updated_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134362), 'name': 'Fred the Frog', 'age': 9, 'id': '98bea5de-9cb0-4d78-8a9d-c4de03521c30', 'created_at': datetime.datetime(2020, 2, 19, 21, 47, 29, 134343)}"]
 ```
 <br>
+<footer>
+<p align="center">
+<img src="https://media0.giphy.com/media/coxQHKASG60HrHtvkt/giphy.gif?cid=6c09b952gjns7odqruiw6isle6jxqntm70ahtbs4gdrw4hbx&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g">
+</p>
+</footer>
