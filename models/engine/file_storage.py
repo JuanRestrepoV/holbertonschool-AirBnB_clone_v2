@@ -11,8 +11,6 @@ class FileStorage:
     def all(self, cls=None):
         newDict = {}
         if cls:
-            if type(cls) == str:
-                cls = eval(cls)
             for key, value in self.__objects.items():
                 if value.__class__ == cls:
                     newDict[key] = value
