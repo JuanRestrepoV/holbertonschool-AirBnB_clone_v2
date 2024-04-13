@@ -46,7 +46,7 @@ class Place(BaseModel, Base):
             from models.amenity import Amenity
             from models.__init__ import storage
             return [amenity for amenity in storage.all(Amenity).values()
-                    if amenity.id in self.amenity_ids]
+                    if amenity.id in Place.amenity_ids]
 
         @amenities.setter
         def amenities(self, amenity):
