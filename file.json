@@ -42,10 +42,40 @@
         "__class__": "State"
     },
     "User.b05ae832-9636-4e5d-96c6-9f7d15ad962e": {
+        "name": "Brayan",
         "id": "b05ae832-9636-4e5d-96c6-9f7d15ad962e",
         "created_at": "2024-04-12T14:28:08.030149",
         "updated_at": "2024-04-12T14:28:08.031253",
-        "name": "Brayan",
         "__class__": "User"
+    },
+    "Place.6eee9d3b-8a9d-472f-b157-727a44ff1d30": {
+        "id": "6eee9d3b-8a9d-472f-b157-727a44ff1d30",
+        "created_at": "2024-04-12T19:03:24.432834",
+        "updated_at": "2024-04-12T19:03:24.433944",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
+    },
+    "Place.0a7eaf46-3bd8-4b43-bdc8-7df1563a68fe": {
+        "id": "0a7eaf46-3bd8-4b43-bdc8-7df1563a68fe",
+        "created_at": "2024-04-12T19:04:13.207819",
+        "updated_at": "2024-04-12T19:04:13.208737",
+        "city_id": "0001",
+        "user_id": "0001",
+        "name": "My little house",
+        "number_rooms": 4,
+        "number_bathrooms": 2,
+        "max_guest": 10,
+        "price_by_night": 300,
+        "latitude": 37.773972,
+        "longitude": -122.431297,
+        "__class__": "Place"
     }
 }

@@ -129,7 +129,7 @@ class HBNBCommand(cmd.Cmd):
             setattr(new_instance, valueAttr[0], eval(
                 valueAttr[1].replace("_", " ")))
         print(new_instance.id)
-        BaseModel.save(new_instance)
+        new_instance.save()
 
     def help_create(self):
         """ Help information for the create method """
