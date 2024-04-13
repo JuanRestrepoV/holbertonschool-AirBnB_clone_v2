@@ -10,6 +10,7 @@ class FileStorage:
 
     def all(self, cls=None):
         newDict = {}
+        print("hi")
         if cls:
             for key, value in self.__objects.items():
                 if value.__class__ == cls:
