@@ -27,7 +27,10 @@ class FileStorage:
 
     def new(self, obj):
         """Adds new object to storage dictionary"""
-        self.all().update({obj.to_dict()['__class__'] + '.' + obj.id: obj})
+        key = obj.__class__.__name__ + '.' + obj.id
+        self.__objects[key] = obj
+        self.save()
+
 
     def save(self):
         """Saves storage dictionary to file"""
@@ -74,7 +77,3 @@ class FileStorage:
         if instance in FileStorage.__objects.keys():
             del FileStorage.__objects[instance]
         storage.save()
-
-    
-    def close(self):
-        self.reload()
