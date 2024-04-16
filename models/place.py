@@ -41,14 +41,14 @@ class Place(BaseModel, Base):
             return [review for review in storage.all(Review).values() if review.place_id == self.id]
 
         @property
-        def amenity_list(self):
-            from models.amenity import Amenity
-            from models.__init__ import storage
-            return [amenity for amenity in storage.all(Amenity).values()
-                    if amenity.id in self.amenity_ids]
+    def amenities(self):
+        from models.amenity import Amenity
+        from models.__init__ import storage
+        return [storage.all(Amenity)[amenity_id] for amenity_id in self.amenity_ids]
 
-        @amenity_list.setter
-        def amenity_list(self, amenity):
-            from models.amenity import Amenity
-            if isinstance(amenity, Amenity):
-                self.amenity_ids.append(amenity.id)
+
+    @amenities.setter
+    def amenities(self, amenity):
+        from models.amenity import Amenity
+        if isinstance(amenity, Amenity):
+            self.amenity_ids.append(amenity.id)
