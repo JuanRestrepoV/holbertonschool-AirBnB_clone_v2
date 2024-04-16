@@ -86,19 +86,32 @@
         "__class__": "Amenity"
     },
     "Place.7e0d7752-f7bd-4fdb-880c-d98aa4fb8a0d": {
+        "place_id": "ID EXISE PLACE",
+        "amenity_id": "ID EXISTENTE DE AMENITY",
         "id": "7e0d7752-f7bd-4fdb-880c-d98aa4fb8a0d",
         "created_at": "2024-04-13T01:58:11.417935",
         "updated_at": "2024-04-13T01:58:11.420173",
-        "place_id": "ID EXISE PLACE",
-        "amenity_id": "ID EXISTENTE DE AMENITY",
         "__class__": "Place"
     },
     "Place.61a562e6-0cf9-4dc8-bb53-6923fdee5558": {
+        "place_id": "44642c8c-977b-4d9d-920e-6875b2948a46",
+        "amenity_id": "c723618f-8e71-4a73-8f9c-904adfea0430",
         "id": "61a562e6-0cf9-4dc8-bb53-6923fdee5558",
         "created_at": "2024-04-13T01:59:47.670402",
         "updated_at": "2024-04-13T01:59:47.671679",
-        "place_id": "44642c8c-977b-4d9d-920e-6875b2948a46",
-        "amenity_id": "c723618f-8e71-4a73-8f9c-904adfea0430",
+        "__class__": "Place"
+    },
+    "Place.bcb04e32-455e-46b8-8618-c3160bec9ff3": {
+        "id": "bcb04e32-455e-46b8-8618-c3160bec9ff3",
+        "created_at": "2024-04-16T11:07:30.709215",
+        "updated_at": "2024-04-16T11:07:30.710160",
+        "__class__": "Place"
+    },
+    "Place.a8736ab2-1dde-4258-bcc8-a3b1a0576a56": {
+        "id": "a8736ab2-1dde-4258-bcc8-a3b1a0576a56",
+        "created_at": "2024-04-16T11:09:26.187002",
+        "updated_at": "2024-04-16T11:09:26.188743",
+        "name": "Bra",
         "__class__": "Place"
     }
 }
