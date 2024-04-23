@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-3th task file with a Flask app
+4th task file with a Flask app
 """
 from flask import Flask
 from markupsafe import escape
@@ -47,6 +47,17 @@ def pythoniscool(text):
         str: returns '/python/<text>'
     """
     return "Python {}".format(text.replace("_", " "))
+
+
+
+@app.route("/number/<int:n>", strict_slashes=False)
+def IsANumber(n):
+    """Root route that returns '/python/<text>'
+
+    Returns:
+        str: returns '/python/<text>'
+    """
+    return "{} is a number".format(n)
 
 
 if __name__ == "__main__":
