@@ -30,7 +30,7 @@ def hbnb():
 
 
 @app.route(f"/c/<text>", strict_slashes=False)
-def cisfun(text):
+def c_is_fun(text):
     """Root route that returns 'C <text>!'
 
     Returns:
@@ -41,7 +41,7 @@ def cisfun(text):
 
 @app.route(f"/python/", defaults={'text': 'is_cool'})
 @app.route(f"/python/<text>", strict_slashes=False)
-def pythoniscool(text):
+def python_is_cool(text):
     """Root route that returns '/python/<text>'
 
     Returns:
@@ -51,7 +51,7 @@ def pythoniscool(text):
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
-def IsANumber(n):
+def is_a_number(n):
     """Root route that returns '/number/<n>'
 
     Returns:
@@ -61,7 +61,7 @@ def IsANumber(n):
 
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
-def NumberTemplate(n):
+def number_template(n):
     """Root route that returns '/number_template/<n>'
 
     Returns:
@@ -71,7 +71,7 @@ def NumberTemplate(n):
 
 
 @app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
-def OddOrEven(n):
+def odd_or_even(n):
     """Root route that returns '/number_odd_or_even/<n>'
 
     Returns:
