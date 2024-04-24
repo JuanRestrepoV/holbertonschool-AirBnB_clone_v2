@@ -74,3 +74,7 @@ class FileStorage:
         if instance in FileStorage.__objects.keys():
             del FileStorage.__objects[instance]
         storage.save()
+
+
+    def close(self):
+        self.reload()
