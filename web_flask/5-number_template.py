@@ -61,7 +61,7 @@ def IsANumber(n):
 
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
-def NumberTemplate(n):
+def number_template(n):
     """Root route that returns '/number_template/<n>'
 
     Returns:
